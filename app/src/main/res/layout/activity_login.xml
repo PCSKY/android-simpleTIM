@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootViewLogin"
+    android:background="@drawable/loginbg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.zdm.simpletim.LoginActivity">
+
+    <!-- Login progress  进度条： progressBarStyleLarge （大圆形）-->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+
+    <!--ScrollView滚动视图是指当拥有很多内容，屏幕显示不完时，需要通过滚动跳来显示的视图。ScrollView只支持垂直滚动，只接受一个子元素。-->
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!--模拟头像显示-->
+            <ImageView
+                android:id="@+id/symbol"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/symbol"
+                />
+
+            <!--账号框-->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60sp"
+                android:layout_marginLeft="100sp"
+                android:layout_marginRight="100sp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/prompt_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--密码框-->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="100sp"
+                android:layout_marginRight="100sp">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/prompt_password"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <!--
+                android:imeActionId 设置IME动作ID，在onEditorAction中捕获判断进行逻辑操作。
+                android:imeActionLabel  设置IME动作标签。但是不能保证一定会使用，猜想在输入法扩展的时候应该有用。
+                android:imeOptions  设置软键盘的Enter键。
+                -->
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--登录按钮-->
+            <Button
+                android:id="@+id/email_sign_in_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100sp"
+                android:layout_marginRight="100sp"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/btn_selector"
+                android:text="@string/action_sign_in"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--底部按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!--注册-->
+        <Button
+            android:id="@+id/regist"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:gravity="center"
+            android:text="@string/new_register"
+            android:textColor="#468fba"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/nothing"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:gravity="center"
+            android:textColor="#454343"
+            android:textStyle="bold" />
+
+        <!--帮助-->
+        <Button
+            android:id="@+id/login_help"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:gravity="center"
+            android:text="@string/login_help"
+            android:textColor="#468fba"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!--
+        使用TextInputLayout必须手动引入Design Support Library，在build.gradle中
+        控件AutoCompleteTextView 客户端保存搜索历史自动提示
+        AutoCompleteTextView常用属性
+
+        android:completionHint	            设置出现在下拉菜单中的提示标题
+        android:completionThreshold	        设置用户至少输入多少个字符才会显示提示
+        android:dropDownHorizontalOffset	下拉菜单于文本框之间的水平偏移。默认与文本框左对齐
+        android:dropDownHeight	            下拉菜单的高度
+        android:dropDownWidth	            下拉菜单的宽度
+        android:singleLine	                单行显示
+        android:dropDownVerticalOffset	    垂直偏移量
+    -->
