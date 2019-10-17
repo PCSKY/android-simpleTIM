@@ -29,6 +29,7 @@ Windows10 + Android studio 3.3.0 + SQLite
 * 登陆注册信息提示，若不符合条件则会有警告
 * 主界面的联系人信息表，导航侧滑菜单，浮动按钮，顶部menu
 * 联系人列表侧边字母导航栏，通过把用户名转化为拼音进行实现
+* app语言国际化
 <br/><br/><br/>
 # 数据库表结构
 * tb_person数据表 
@@ -61,3 +62,4 @@ Windows10 + Android studio 3.3.0 + SQLite
 * [Android Studio自带导航侧滑实现](https://blog.csdn.net/dzjin1234/article/details/79008269) <br/>
 * [Toolbar + DrawerLayout实现侧滑菜单](https://www.cnblogs.com/Chenshuai7/p/5443358.html) <br/>
 * [实现字母导航栏](https://blog.csdn.net/qq_30379689/article/details/52684312) <br/>
+* [Android 国际化和完整的语言代码表](https://blog.csdn.net/htwhtw123/article/details/79857855) <br/>
