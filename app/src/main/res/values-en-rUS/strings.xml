@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SimpleTIM</string>
+    <string name="top_lable_name">friends list</string>
+    <string name="action_regist_now">Register now</string>
+    <string name="action_settings">Safety exit</string>
+    <string name="title_activity_login">Account login</string>
+    <string name="title_activity_regist">Account regist</string>
+    <string name="description">这是一个简易的模拟TIM客户端</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!--LoginActivity-->
+    <string name="new_register">new regist</string>
+    <string name="login_help">help?</string>
+    <string name="prompt_email">QQ号/mobile/email</string>
+    <string name="prompt_password">password</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="real_name">real name</string>
+    <string name="action_sign_in">login</string>
+    <string name="action_sign_in_short">Sign</string>
+    <string name="action_regist">regist</string>
+    <string name="action_regist_short">regist</string>
+    <string name="error_invalid_email">Not a valid account</string>
+    <string name="error_invalid_password">Password too short, at least 4 digits</string>
+    <string name="error_incorrect_password">Invalid password</string>
+    <string name="error_field_required">Invalid user name</string>
+</resources>
