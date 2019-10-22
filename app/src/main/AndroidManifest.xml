@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- 欢迎界面(设置为主活动) -->
-        <activity android:name=".WelcomeActivity">
+        <!--
+            欢迎界面(设置为主活动,模式为singleTask)
+            设置一个Activity的启动模式为singleTask，那么每次启动此Activity时系统都会检查当前任务栈中是否已经存在此Activity的实例
+        -->
+        <activity android:name=".WelcomeActivity"
+                  android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

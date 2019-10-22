@@ -29,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     private static boolean isExit=false;       // 判断是否直接退出程序
     private AutoCompleteTextView mEmailView;   // 用户名
     private EditText mPasswordView;            // 密码
+    private int count = 0;                     // 判断按钮次数
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,16 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if(actionId == EditorInfo.IME_ACTION_DONE ) {
+                    ++count;
+                    if(count >= 3) {
+                        //finish();
+                        //System.exit(0);
+                        Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
+                        //传递退出所有Activity的Tag对应的布尔值为true
+                        intent.putExtra(WelcomeActivity.EXIST, true);
+                        //启动WelcomeActivity
+                        startActivity(intent);
+                    }
                     attemptLogin();   // 调用函数检查登陆信息是否合法
                     return true;
                 }
@@ -56,6 +67,16 @@ public class LoginActivity extends AppCompatActivity {
         mEmailSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ++count;
+                if(count >= 3) {
+                    //finish();
+                    //System.exit(0);
+                    Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
+                    //传递退出所有Activity的Tag对应的布尔值为true
+                    intent.putExtra(WelcomeActivity.EXIST, true);
+                    //启动WelcomeActivity
+                    startActivity(intent);
+                }
                 attemptLogin();   // 调用函数检查登陆信息是否合法
             }
         });

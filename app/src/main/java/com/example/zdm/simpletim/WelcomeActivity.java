@@ -13,8 +13,11 @@ import java.util.TimerTask;
  * User: ZDM
  * DateTime: 2019/10/14
  * Description: app欢迎页面
+ * 设置启动模式为singleTask
  */
 public class WelcomeActivity extends Activity {
+
+    public static final String EXIST = "exist";   // 声明一个静态常量，用作退出WelcomeActivity的Tag
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,19 @@ public class WelcomeActivity extends Activity {
             }
         };
         timer.schedule(timerTask, 2000);   // 两秒后执行
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        if (intent != null) {//判断其他Activity启动本Activity时传递来的intent是否为空
+            //获取intent中对应Tag的布尔值
+            boolean isExist = intent.getBooleanExtra(EXIST, false);
+            //如果为真则退出本Activity
+            if (isExist) {
+                this.finish();
+            }
+        }
     }
 }
 /**
