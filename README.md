@@ -29,7 +29,8 @@ Windows10 + Android studio 3.3.0 + SQLite
 * 登陆注册信息提示，若不符合条件则会有警告
 * 主界面的联系人信息表，导航侧滑菜单，浮动按钮，顶部menu
 * 联系人列表侧边字母导航栏，通过把用户名转化为拼音进行实现
-* app语言国际化
+* app语言国际化，支持中英双语
+* app安全设置，输入信息错误3次则直接退出app
 <br/><br/><br/>
 # 数据库表结构
 * tb_person数据表 
@@ -40,11 +41,12 @@ Windows10 + Android studio 3.3.0 + SQLite
 | 2 | password | nvarchar(30) not null | 密码 |  |
 | 3 |   name   | nvarchar(30) not null | 真实姓名 |  |
 # 待完善
+- [x] 账号密码错误次数达到上限则退出app
+- [ ] 进行账号信息和密码的更改
 - [ ] 密码存储时通过加密算法进行加密存储
 - [ ] 实现侧滑菜单的对应功能
 - [ ] 注册进行限制，只有合法的QQ号，手机号，邮箱号可以允许注册(正则表达式)
 - [ ] 登陆注册界面排布进行优化
-- [ ] 密码错误次数达到上限则退出app
 <br/><br/><br/>
 # 参考链接
 * [Android实现简易QQ](https://github.com/YEN-GitHub/Android_simpleQQ) <br/>
@@ -63,3 +65,4 @@ Windows10 + Android studio 3.3.0 + SQLite
 * [Toolbar + DrawerLayout实现侧滑菜单](https://www.cnblogs.com/Chenshuai7/p/5443358.html) <br/>
 * [实现字母导航栏](https://blog.csdn.net/qq_30379689/article/details/52684312) <br/>
 * [Android 国际化和完整的语言代码表](https://blog.csdn.net/htwhtw123/article/details/79857855) <br/>
+* [Android退出所有Activity最优雅的方式](https://www.cnblogs.com/caobotao/p/5127645.html) <br/>
