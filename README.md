@@ -1,7 +1,9 @@
 # android-simpleTIM
 ![Logo](https://github.com/PCSKY/android-simpleTIM/blob/master/img/ic_launcher.png)<br/>
-这是一个模拟腾讯TIM客户端的一个Android app，实现了一个登陆注册的Demo，也实现了使用侧滑抽屉UI的主界面，该app仅用于熟悉Android开发的基础操作。
-<br/><br/><br/>
+这是一个模拟腾讯TIM客户端的一个Android app，实现了一个登陆注册的Demo，也实现了使用侧滑抽屉UI的主界面，该app仅用于熟悉Android开发的基础操作。<br/>
+<br/>
+[SimpleTIM_V1.0.1.apk](https://github.com/PCSKY/android-simpleTIM/blob/master/app/release/SimpleTIM_V1.0_C1release.apk)
+<br/><br/>
 # 开发环境
 Windows10 + Android studio 3.3.0 + SQLite
 <br/><br/><br/>
