@@ -8,3 +8,4 @@
     <item android:drawable="@drawable/btn_pressed" android:state_pressed="true"/>
 
 </selector>
+<!--选择器，根据按钮按下或抬起来判断使用样式-->
