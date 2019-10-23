@@ -11,12 +11,15 @@ Windows10 + Android studio 3.3.0 + SQLite
 | 依赖包        | 介绍           |
 |:---------------:|:----------------------------|
 | [pinyin4j.jar](https://github.com/belerweb/pinyin4j) | Pinyin4j是一个流行的Java库，支持中文字符和拼音之间的转换。拼音输出格式可以定制 |
-# 登陆注册效果
+# 效果图
 * 登录流程<br/>
 <img width="350" height="600" src="https://github.com/PCSKY/android-simpleTIM/blob/master/img/login.gif"/>
 
 * 注册流程<br/>
 <img width="350" height="600" src="https://github.com/PCSKY/android-simpleTIM/blob/master/img/regist.gif"/>
+
+* 安全设置<br/>
+<img width="350" height="600" src="https://github.com/PCSKY/android-simpleTIM/blob/master/img/safeSetting.gif"/>
 
 <br/><br/>
 # 主要界面
